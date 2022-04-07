@@ -19,8 +19,10 @@ function updateClock() {
   let minuteDeg = (360 / 60) * minute - 90;
   minuteElement.style.transform = `rotate(${minuteDeg}deg)`;
 
+  let minutesDeg = (360 / 60) * minute;
+
   let hourDeg = (360 / 12) * hour - 90;
-  hourElement.style.transform = `rotate(${hourDeg + minuteDeg / 12}deg)`;
+  hourElement.style.transform = `rotate(${hourDeg + minutesDeg / 12}deg)`;
 }
 
 function fixZero(time) {
